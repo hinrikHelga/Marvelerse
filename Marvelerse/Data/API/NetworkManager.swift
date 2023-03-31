@@ -24,9 +24,7 @@ final class NetworkingManager {
       completion(.failure(NetworkError.invalidUrl))
       return
     }
-    
-    print(absoluteUrl)
-    
+        
     let request = URLRequest(url: absoluteUrl)
 
     let dataTask = URLSession.shared.dataTask(with: request) { data, response, error in

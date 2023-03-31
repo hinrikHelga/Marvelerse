@@ -17,7 +17,7 @@ class CharactersViewModel: ObservableObject {
   @Published var hasError = false
   
   func getCharacters() async {
-    NetworkingManager.shared.request(to: ApiUtils.urlWithHash(APIConstants.baseURL.appending("/v1/public/characters")),
+    NetworkingManager.shared.request(to: APIConstants.baseURL.appending("/v1/public/characters"),
                                      type: ApiCharacterResult.self) { res in
       switch res {
       case .success(let response):
